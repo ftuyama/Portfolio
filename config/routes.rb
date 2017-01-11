@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  controller 'admin' do
+      get '/admin/' => :index
+    end
+
+  resources :projects
   resources :users
   root 'home#index'
 

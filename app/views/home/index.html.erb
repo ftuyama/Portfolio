@@ -22,7 +22,7 @@
                 display: none
             }
         }
-        
+
         @media screen {
             .gm-style .gmnoscreen,
             .gmnoscreen {
@@ -37,7 +37,7 @@
             font-weight: 400;
             text-decoration: none
         }
-        
+
         .gm-style img {
             max-width: none
         }
@@ -46,7 +46,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Marqa Portfolio</title>
+    <title>Portfolio</title>
 
     <meta name="description" content="tottaly responsive personal portfolio template">
     <meta name="keywords" content="responsive, template, portfolio, html, css, javascript">
@@ -60,20 +60,20 @@
     <link rel="shortcut icon" href="img/favico/marqa.ico">
     <link rel="apple-touch-icon" sizes="60x60" href="img/favico/apple-icon-60x60.png">
     <!-- Ionicon fonts css file -->
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <%= stylesheet_link_tag 'ionicons.min.css' %>
     <!-- magnific popup css file -->
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <%= stylesheet_link_tag 'magnific-popup.css' %>
     <!-- Animate.css file -->
-    <link rel="stylesheet" href="css/animate.css">
+    <%= stylesheet_link_tag 'animate.css' %>
     <!-- Owl carousel css file -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <%= stylesheet_link_tag 'owl.carousel.css' %>
     <!-- Bootstrap file -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <%= stylesheet_link_tag 'bootstrap.min.css' %>
     <!-- Custom styles css file -->
-    <link rel="stylesheet" href="css/style.css">
+    <%= stylesheet_link_tag 'style.css' %>
 
     <!--[if lt IE 9]>
-		    <script src="js/html5shiv.js"></script>
+		     %>html5shiv.js"></script>
 			<script src="js/respond.js"></script>
 		<![endif]-->
 
@@ -108,11 +108,11 @@
     <!-- Start Header Section -->
     <div class="header" id="header">
         <div id="large-header" class="large-header" style="height: 608px;">
-            <!--<canvas id="demo-canvas" width="1366" height="608"></canvas>-->
+            <canvas id="demo-canvas" width="1366" height="608"></canvas>
             <div class="content center">
                 <div class="container">
                     <p>Hello, It's me</p>
-                    <h1>John Doe</h1>
+                    <h1><%= @user.name %></h1>
                     <p>ui/ux designer - developer</p>
                     <a href="#about-me">Read more</a>
                     <a href="#portfolio">my works</a>
@@ -127,7 +127,7 @@
 
     <!-- Start Side Menu -->
     <nav id="top-nav">
-        <div class="logo center"><a href="#">Marqa</a></div>
+        <div class="logo center"><a href="#">Resume</a></div>
         <!-- LOGO -->
         <div class="menu" id="menu">
             <span class="bar b1"></span>
@@ -1287,36 +1287,37 @@
 
 
     <!-- Including jQuery file -->
-    <script src="js/jquery-1.12.1.min.js"></script>
+    <%= javascript_include_tag "jquery-1.12.1.min.js" %>
     <!-- Including jQuery.appear file -->
-    <script src="js/jquery.appear.js"></script>
+    <%= javascript_include_tag "jquery.appear.js" %>
     <!-- Bootstrap js file -->
-    <script src="js/bootstrap.min.js"></script>
+    <%= javascript_include_tag "bootstrap.min.js" %>
     <!-- easy pie chart -->
-    <script src="js/jquery.easypiechart.min.js"></script>
+    <%= javascript_include_tag "jquery.easypiechart.min.js" %>
     <!-- NiceScroll plugin -->
-    <script src="js/jquery.nicescroll.min.js"></script>
+    <%= javascript_include_tag "bootstrap.min.js" %>
+    <%= javascript_include_tag "jquery.nicescroll.min.js" %>
     <!-- animate numbers plugin -->
-    <script src="js/jquery.animatenumber.min.js"></script>
+    <%= javascript_include_tag "jquery.animatenumber.min.js" %>
     <!-- Horizontal bar chart -->
-    <script src="js/bars.js"></script>
+    <%= javascript_include_tag "bars.js" %>
     <!-- mixitup plugin -->
-    <script src="js/jquery.mixitup.min.js"></script>
+    <%= javascript_include_tag "jquery.mixitup.min.js" %>
     <!-- animated background header -->
-    <script src="js/tweenlite.min.js"></script>
+    <%= javascript_include_tag "tweenlite.min.js" %>
     <!-- magnific popup js file -->
-    <script src="js/magnific-popup.js"></script>
+    <%= javascript_include_tag "magnific-popup.js" %>
     <!-- form validation file -->
-    <script src="js/validator.min.js"></script>
+    <%= javascript_include_tag "validator.min.js" %>
     <!-- Owl carousel js file -->
-    <script src="js/owl.carousel.min.js"></script>
+    <%= javascript_include_tag "owl.carousel.min.js" %>
     <!-- Google Map -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJOx2cEs3x3dTSubqABijclN_3uEmL7f8"></script>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyBJOx2cEs3x3dTSubqABijclN_3uEmL7f8" %>
     <!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script> -->
     <!-- Custom file  -->
-    <script src="js/plugins.js"></script>
+    <%= javascript_include_tag "plugins.js" %>
     <!-- Wow.js file -->
-    <script src="js/wow.min.js"></script>
+    <%= javascript_include_tag "wow.min.js"></script>
     <script>
         new WOW().init();
     </script>

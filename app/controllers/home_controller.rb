@@ -7,6 +7,9 @@ class HomeController < ApplicationController
 		@user ||= default_user
 	end
 
+	def alive
+	end
+
 	private
 		def default_user
 			User.find_by_username("ftuyama") || User.create(:username => "ftuyama", :name => "Felipe Tuyama")

@@ -1,11 +1,13 @@
 <h1>Admin#index</h1>
 
-<h3>Users</h3>
-<% @users.map do |u| %>
-  <p><%= u.name  %></p>
-<% end %>
+<div class="container">
+  <h3>Users</h3>
+  <% @users.map do |u| %>
+    <p><%= u.name  %></p>
+  <% end %>
 
-<h3>Projects</h3>
-<% @projects.map do |p| %>
-  <p><%= p.name  %></p>
-<% end %>
+  <h3>Projects</h3>
+  <% @projects.map do |p| %>
+    <p><%= p.name  %></p>
+  <% end %>
+</div>

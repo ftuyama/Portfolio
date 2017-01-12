@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>User Profile</h1>
+<h1>Profile <%= @user.username %> </h1>
 <div class="container">
   <p>
     <strong>Name:</strong>
@@ -14,17 +14,23 @@
     <strong>Position:</strong>
     <%= @user.position %>
   </p>
+  <% if @user.github %>
+    <p>
+      <strong>Github</strong>
+      <a href="https://github.com/<%= @user.github %>">https://github.com/<%= @user.github %></a>
+    </p>
+  <% end %>
   <p>
     <strong>Projects:</strong>
     <% @user.projects.each do |project| %>
       <tr>
         <td><%= project.name %></td>
-        <td><%= link_to 'Show', project %></td>
+        <td><%= link_to 'Show', project, class: "btn btn-default" %></td>
       </tr>
     <% end %>
   </p>
-  <p><%= link_to 'New Project', new_project_path %></p>
+  <p><%= link_to 'New Project', new_project_path, class: "btn btn-success" %></p>
 </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Edit', edit_user_path(@user), class: "btn btn-default" %> |
+<%= link_to 'Back', users_path, class: "btn btn-default" %>

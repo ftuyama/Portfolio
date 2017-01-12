@@ -1,26 +1,36 @@
 <h1>Listing users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+<div class="container">
+  <table>
+    <thead>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Projects Amount</th>
+        <th>Github</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.projects.count %></td>
+          <td>
+            <% if user.github %>
+              <a href="https://github.com/<%= user.github %>">Github</a>
+            <% end %>
+          </td>
+          <td><%= link_to 'Show', user, class: "btn btn-default" %></td>
+          <td><%= link_to 'Edit', edit_user_path(user), class: "btn btn-default" %></td>
+          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
-<%= link_to 'Show Projects', projects_path %>
+<%= link_to 'New User', new_user_path, class: "btn btn-success" %>
+<%= link_to 'Show Projects', projects_path, class: "btn btn-default" %>

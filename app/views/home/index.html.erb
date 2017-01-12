@@ -173,9 +173,9 @@
                     <div class="heading-line"></div>
                     <div class="personal-wrapper">
                         <span><strong>name: </strong><%= @user.name %></span>
-                        <span><strong>E-mail: </strong>personal@website.com</span>
+                        <span><strong>E-mail: </strong><%= @user.username %>@gmail.com</span>
                         <span><strong>phone number: </strong>+(555) 176 245 221</span>
-                        <span><strong>website: </strong>www.johndoe.com</span>
+                        <span><strong>website: </strong><a href="https://github.com/<%= @user.github %>">www.github.com/<%= @user.github %></a></span>
                     </div>
                 </div>
                 <div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
@@ -1262,7 +1262,7 @@
                     <div class="icon-wrapper center">
                         <a href="#" class="icon fb ion-social-facebook"></a>
                         <a href="#" class="icon tw ion-social-twitter"></a>
-                        <a href="#" class="icon gh ion-social-github"></a>
+                        <a href="https://github.com/<%= @user.github %>" class="icon gh ion-social-github"></a>
                         <a href="#" class="icon gp ion-social-googleplus"></a>
                         <a href="#" class="icon li ion-social-linkedin"></a>
                         <a href="#" class="icon pin ion-social-pinterest"></a>

@@ -18,6 +18,7 @@
     <p>
       <strong>Github</strong>
       <a href="https://github.com/<%= @user.github %>">https://github.com/<%= @user.github %></a>
+      <%= image_tag(@image, alt: "Github image", class: "img-github") if @image %>
     </p>
   <% end %>
   <p>

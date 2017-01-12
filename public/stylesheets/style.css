@@ -240,6 +240,9 @@ nav .logo a {
 	cursor: pointer;
 	z-index: 9999;
 }
+.img-github {
+	width: 35px;
+}
 span.bar {
 	width: 35px;
 	height: 5px;

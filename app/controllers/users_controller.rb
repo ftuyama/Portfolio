@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     session[:session_id] = @user.id
+		@image = fetch_github_image
   end
 
   # GET /users/new
@@ -63,6 +64,14 @@ class UsersController < ApplicationController
   end
 
   private
+    def fetch_github_image
+      if @user.github
+        profile_json = RestClient.get('https://api.github.com/users/' + @user.github)
+        profile = JSON.parse(profile_json)
+        profile['avatar_url']
+      end
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

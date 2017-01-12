@@ -243,6 +243,9 @@ nav .logo a {
 .img-github {
 	width: 35px;
 }
+.bottom-button {
+	text-align: center;
+}
 span.bar {
 	width: 35px;
 	height: 5px;

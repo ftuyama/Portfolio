@@ -4,7 +4,11 @@ class HomeController < ApplicationController
 		# Gets user from URL parameter
 		username = params[:user]
 		@user = User.find_by_username(username)
-		# Default user
-		@user ||= User.find_by_username("ftuyama")
+		@user ||= default_user
 	end
+
+	private
+		def default_user
+			User.find_by_username("ftuyama") || User.create(:username => "ftuyama", :name => "Felipe Tuyama")
+		end
 end

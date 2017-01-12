@@ -1,19 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
-<p>
-  <strong>Projects:</strong>
-  <% @user.projects.each do |project| %>
-    <tr>
-      <td><%= project.name %></td>
-      <td><%= link_to 'Show', project %></td>
-    </tr>
-  <% end %>
-</p>
-<p><%= link_to 'New Project', new_project_path %></p>
+<h1>User Profile</h1>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </p>
+  <p>
+    <strong>Formation:</strong>
+    <%= @user.formation %>
+  </p>
+  <p>
+    <strong>Position:</strong>
+    <%= @user.position %>
+  </p>
+  <p>
+    <strong>Projects:</strong>
+    <% @user.projects.each do |project| %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= link_to 'Show', project %></td>
+      </tr>
+    <% end %>
+  </p>
+  <p><%= link_to 'New Project', new_project_path %></p>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

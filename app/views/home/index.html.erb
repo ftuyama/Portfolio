@@ -113,7 +113,7 @@
                 <div class="container">
                     <p>Hello, It's me</p>
                     <h1><%= @user.name %></h1>
-                    <p>ui/ux designer - developer</p>
+                    <p><%= @user.formation %> - <%= @user.position %></p>
                     <a href="#about-me">Read more</a>
                     <a href="#portfolio">my works</a>
                 </div>
@@ -134,6 +134,9 @@
             <span class="bar b2"></span>
             <span class="bar b3"></span>
         </div>
+        <div class="right-menu">
+          <%= link_to 'Manage Account', users_path %>
+        </div>
         <div class="side-menu" id="side-menu">
             <!-- Menu items -->
             <a href="#header">Home</a>
@@ -153,29 +156,29 @@
         <div class="container">
             <div class="row">
                 <!-- Profile Pic -->
-                <div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <img src="img/my-face.png" alt="my profile">
                 </div>
-                <div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
-                    <h2 class="h2">John Doe</h2>
+                <div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
+                    <h2 class="h2"><%= @user.name %></h2>
                     <div class="heading-line"></div>
-                    <p class="introduce">talented web designer / developer</p>
+                    <p class="introduce">talented web designer / <%= @user.position %></p>
                     <p class="intro">Enthusiastically reintermediate leveraged potentialities and wireless web services. Distinctively maintain ubiquitous best practices through market positioning materials. Progressively reintermediate ubiquitous channels via bricks-and-clicks
                         technology. Distinctively formulate innovative relationships and high standards.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="profile col-sm-4 col-xs-12 wow fadeInUp text-center" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="profile col-sm-4 col-xs-12 wow fadeInUp text-center" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <h3>personal info</h3>
                     <div class="heading-line"></div>
                     <div class="personal-wrapper">
-                        <span><strong>name: </strong>John Doe</span>
+                        <span><strong>name: </strong><%= @user.name %></span>
                         <span><strong>E-mail: </strong>personal@website.com</span>
                         <span><strong>phone number: </strong>+(555) 176 245 221</span>
                         <span><strong>website: </strong>www.johndoe.com</span>
                     </div>
                 </div>
-                <div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <!-- Start Accordion -->
                     <div class="accordion">
                         <div class="acc-item">
@@ -438,15 +441,15 @@
     <div class="experiences center" id="experiences">
         <div class="container">
             <!-- Title -->
-            <div class="title wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+            <div class="title wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                 <h2 class="h2">work experiences</h2>
                 <div class="heading-line"></div>
                 <p class="main-para">Professionally expedite orthogonal deliverables with emerging best practices. Uniquely leverage other's robust core competencies.</p>
             </div>
             <!-- start timeline -->
-            <div class="timeline wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+            <div class="timeline wow fadeIn" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                 <!-- Event No. 1 -->
-                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-university"></i>
                     </div>
@@ -458,7 +461,7 @@
                     </div>
                 </div>
                 <!-- Event No. 2 -->
-                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-briefcase"></i>
                     </div>
@@ -470,7 +473,7 @@
                     </div>
                 </div>
                 <!-- Event No. 3 -->
-                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-cube"></i>
                     </div>
@@ -482,7 +485,7 @@
                     </div>
                 </div>
                 <!-- Event No. 4 -->
-                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-star"></i>
                     </div>
@@ -721,7 +724,7 @@
                     <div class="owl-stage" style="transform: translate3d(-8050px, 0px, 0px); transition: 0.25s; width: 10350px;">
                         <div class="owl-item cloned" style="width: 1140px; margin-right: 10px;">
                             <div class="client">
-                                <h3>- Adams kidman -</h3><span>web developer</span>
+                                <h3>- Adams kidman -</h3><span><%= @user.position %></span>
                                 <div class="stars">
                                     <span class="ion-android-star"></span>
                                     <span class="ion-android-star"></span>
@@ -808,7 +811,7 @@
                         </div>
                         <div class="owl-item" style="width: 1140px; margin-right: 10px;">
                             <div class="client">
-                                <h3>- Adams kidman -</h3><span>web developer</span>
+                                <h3>- Adams kidman -</h3><span><%= @user.position %></span>
                                 <div class="stars">
                                     <span class="ion-android-star"></span>
                                     <span class="ion-android-star"></span>
@@ -895,13 +898,13 @@
     <div class="contact center" id="contact-me">
         <div class="container">
             <!-- Title -->
-            <div class="title wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+            <div class="title wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                 <h2 class="h2">Get in touch</h2>
                 <div class="heading-line"></div>
                 <p class="main-para">Globally empower viral services whereas mission-critical platforms. Rapidiously optimize scalable paradigms before covalent technologies.</p>
             </div>
             <div class="row form-wrapper">
-                <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="visibility: hidden; animation-duration: 0.5s; animation-name: none;">
+                <div class="col-md-8 col-md-offset-2 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <!-- Contact-Me Form -->
                     <form data-toggle="validator" role="form" id="contact-form" novalidate="true">
                         <div class="form-group has-feedback">

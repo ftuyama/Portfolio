@@ -10,7 +10,7 @@
  ( 6 ) Fun Facts Section
  ( 7 ) Services Section
  ( 8 ) Technical Skills Section
- ( 9 ) Experiences Section   
+ ( 9 ) Experiences Section
  ( 10 ) Quote Section
  ( 11 ) Portfolio Section
  ( 12 ) Testmonials Section
@@ -20,12 +20,12 @@
  ( 16 ) Back-To-Top Button
  ( 17 ) Scroll Percentage
  ( 18 ) Loading Page
- ( 19 ) Media Query 
- 
+ ( 19 ) Media Query
+
 ----------------------------------------- */
 
 /* ---------------------------------------
-			Start Main Rules 
+			Start Main Rules
 ----------------------------------------- */
 
 html { font-size: 16px; -webkit-font-smoothing: antialiased; }
@@ -59,13 +59,13 @@ button, button:focus, a, a:hover, a:focus, input, input:active, input:focus, tex
 
 
 /* ---------------------------------------
-			Start Global Styles 
+			Start Global Styles
 ----------------------------------------- */
 
 .about-me,
-.fun-facts, 
-.services, 
-.technical-skills, 
+.fun-facts,
+.services,
+.technical-skills,
 .experiences,
 .portfolio { padding:  80px 0 40px;}
 .overlay {
@@ -108,7 +108,7 @@ button, button:focus, a, a:hover, a:focus, input, input:active, input:focus, tex
 
 
 /* ---------------------------------------
-			Start Header Section 
+			Start Header Section
 ----------------------------------------- */
 
 .header .large-header {
@@ -198,7 +198,7 @@ button, button:focus, a, a:hover, a:focus, input, input:active, input:focus, tex
 
 
 /* ---------------------------------------
-			Start Side Menu 
+			Start Side Menu
 ----------------------------------------- */
 
 nav {
@@ -211,7 +211,7 @@ nav {
 	background: #fff;
 	-webkit-box-shadow: 0 0 8px 2px #848484;
 	-moz-box-shadow: 0 0 8px 2px #848484;
-	-ms-box-shadow: 0 0 8px 2px #848484; 
+	-ms-box-shadow: 0 0 8px 2px #848484;
 	-o-box-shadow: 0 0 8px 2px #848484;
 	box-shadow: 0 0 8px 2px #848484;
 }
@@ -229,6 +229,14 @@ nav .logo a {
 	display: inline-block;
 	top: 18px;
 	left: 15px;
+	cursor: pointer;
+	z-index: 9999;
+}
+.right-menu {
+	position: fixed;
+	display: inline-block;
+	top: 18px;
+	right: 15px;
 	cursor: pointer;
 	z-index: 9999;
 }
@@ -279,7 +287,7 @@ span.bar {
 .side-menu a {
 	display: block;
 	position: relative;
-	text-align: center; 
+	text-align: center;
 	font-size: 2rem;
 	font-weight: bold;
 	padding: 15px;
@@ -321,7 +329,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start About me Section 
+			Start About me Section
 ----------------------------------------- */
 
 .about-me .my-pic, .about-me .introduction {
@@ -425,7 +433,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start Fun Facts Section 
+			Start Fun Facts Section
 ----------------------------------------- */
 
 .fun-facts {
@@ -459,7 +467,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start Services Section 
+			Start Services Section
 ----------------------------------------- */
 
 .services .service {
@@ -494,7 +502,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-		Start Technical Skills Section 
+		Start Technical Skills Section
 ----------------------------------------- */
 
 .technical-skills {
@@ -596,7 +604,7 @@ a.selected-item:before, .side-menu a:hover:before {
 .technical-skills .bar_label_min {
 	position: absolute;
 	bottom: -10px;
-} 
+}
 .technical-skills .bar_label_max {right: 20px;}
 .technical-skills .bar_label_min {left: 20px;}
 .technical-skills .b_tooltip {
@@ -642,7 +650,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Experiences Section 
+			Start  Experiences Section
 ----------------------------------------- */
 
 .experiences h2 {
@@ -700,7 +708,7 @@ a.selected-item:before, .side-menu a:hover:before {
 	text-align: left;
 }
 .experiences .timeline .timeline-block .content h3 {
-	margin: 0 auto; 
+	margin: 0 auto;
 	text-transform: uppercase;
 	font-weight: 800;
 	display: inline-block;
@@ -740,7 +748,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Quote Section 
+			Start  Quote Section
 ----------------------------------------- */
 
 .quote {
@@ -780,7 +788,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Portfolio Section 
+			Start  Portfolio Section
 ----------------------------------------- */
 .portfolio .controls { margin-top: 60px;}
 .portfolio .controls button {
@@ -882,7 +890,7 @@ a.selected-item:before, .side-menu a:hover:before {
 .portfolio .img-wrapper:hover .overlay-content span,
 .portfolio .img-wrapper:hover .overlay-content i {
 	left:  50%;
-	opacity: 1; 
+	opacity: 1;
 }
 .white-popup {
 	position: relative;
@@ -899,7 +907,7 @@ a.selected-item:before, .side-menu a:hover:before {
 }
 .white-popup img {margin-top: 20px; margin-bottom: 20px;}
 .white-popup p {
-	text-align: left; 
+	text-align: left;
 	line-height: 2;
 	padding-left: 10px;
 }
@@ -920,7 +928,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Testmonials Section 
+			Start  Testmonials Section
 ----------------------------------------- */
 
 .testmonials {
@@ -978,7 +986,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Contact Section 
+			Start  Contact Section
 ----------------------------------------- */
 
 .contact {
@@ -1087,7 +1095,7 @@ a.selected-item:before, .side-menu a:hover:before {
 	-o-transform: translateY(3px);
 	transform: translateY(3px);
 }
-.contact .form-response { 
+.contact .form-response {
 	margin-top: 10px;
 	font-family: 'Raleway', sans-serif;
 	color: #333;
@@ -1133,7 +1141,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Partners Section 
+			Start  Partners Section
 ----------------------------------------- */
 
 .partners {
@@ -1152,7 +1160,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Footer Section 
+			Start  Footer Section
 ----------------------------------------- */
 
 .footer {background: #181818;}
@@ -1195,8 +1203,8 @@ a.selected-item:before, .side-menu a:hover:before {
 	width: 50px;
 	height: 50px;
 	line-height: 50px;
-	overflow: hidden; 
-	-webkit-transition: all 0.3s; 
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .footer .icon-wrapper .icon:before, .footer .icon-wrapper .icon:after {
@@ -1248,7 +1256,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start  Back to top button 
+			Start  Back to top button
 ----------------------------------------- */
 
 .back-to-top {
@@ -1265,7 +1273,7 @@ a.selected-item:before, .side-menu a:hover:before {
 	color:  #ededed;
 	background: #111;
 	opacity: 0.7;
-	-webkit-transition: all 0.3s ease-in-out; 
+	-webkit-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
 	-webkit-transform: scale(0);
 	-moz-transform: scale(0);
@@ -1285,10 +1293,10 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Star  Scroll Percentage 
+			Star  Scroll Percentage
 ----------------------------------------- */
 
-#scroll {  
+#scroll {
 	position: fixed;
     right: 15px;
     z-index: 500;
@@ -1297,7 +1305,7 @@ a.selected-item:before, .side-menu a:hover:before {
     color: #fff;
     border-radius: 3px;
 }
-#scroll::after { 
+#scroll::after {
     content: " ";
     position: absolute;
     top: 50%;
@@ -1313,7 +1321,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start Loading page 
+			Start Loading page
 ----------------------------------------- */
 
 .loading {
@@ -1467,7 +1475,7 @@ a.selected-item:before, .side-menu a:hover:before {
 
 
 /* ---------------------------------------
-			Start Media Query 
+			Start Media Query
 ----------------------------------------- */
 
 /* Portrait phones and smaller */

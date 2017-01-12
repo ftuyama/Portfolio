@@ -25,6 +25,7 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
+    puts project_params
     @project = Project.new(project_params)
 
     respond_to do |format|
@@ -70,6 +71,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:name)
+      params.require(:project).permit(:name, :user_id)
     end
 end

@@ -20,6 +20,8 @@ group :production do
   gem 'puma'
   # Rails PostgreSQL
   gem 'pg'
+  # Solve Heroku issue
+  gem 'rails_12factor'
 end
 
 group :development, :test do

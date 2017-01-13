@@ -2,15 +2,13 @@
 <hr />
 
 <div class="container">
-  <h3>Users</h3>
-  <%= link_to 'Info', users_path, class: "btn btn-info" %>
-  <% @users.map do |u| %>
-    <p><%= u.name  %></p>
+  <h3>Users <%= link_to 'Info', users_path, class: "btn btn-info" %></h3>
+  <% @users.map do |user| %>
+    <p><%= link_to "#{user.name}", user %></p>
   <% end %>
 
-  <h3>Projects</h3>
-  <%= link_to 'Info', projects_path, class: "btn btn-info" %>
-  <% @projects.map do |p| %>
-    <p><%= p.name  %></p>
+  <h3>Projects <%= link_to 'Info', projects_path, class: "btn btn-info" %></h3>
+  <% @projects.map do |project| %>
+    <p><%= link_to "#{project.name}", project %></p>
   <% end %>
 </div>

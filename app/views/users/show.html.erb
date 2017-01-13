@@ -2,37 +2,50 @@
 
 <h1>Profile <%= @user.username %> </h1>
 <hr />
-<div class="container">
-  <p>
-    <strong>Name:</strong>
-    <%= @user.name %>
-  </p>
-  <p>
-    <strong>Formation:</strong>
-    <%= @user.formation %>
-  </p>
-  <p>
-    <strong>Position:</strong>
-    <%= @user.position %>
-  </p>
-  <% if @user.github %>
+<div class="container well">
+
+  <div class="col col-md-2">
     <p>
-      <strong>Github</strong>
-      <a href="https://github.com/<%= @user.github %>">https://github.com/<%= @user.github %></a>
-      <%= image_tag(@image, alt: "Github image", class: "img-github") if @image %>
+      <%= image_tag(@user.image_url, alt: "Profile image", style: "height: 100px") if @user.image_url %>
     </p>
-  <% end %>
-  <p>
-    <strong>Projects:</strong>
-    <% @user.projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= link_to 'Show', project, class: "btn btn-default" %></td>
-      </tr>
+  </div>
+
+  <div class="col col-md-5">
+    <p>
+      <strong>Name:</strong>
+      <%= @user.name %>
+    </p>
+    <p>
+      <strong>Formation:</strong>
+      <%= @user.formation %>
+    </p>
+    <p>
+      <strong>Position:</strong>
+      <%= @user.position %>
+    </p>
+    <% if @user.github %>
+      <p>
+        <strong>Github</strong>
+        <a href="https://github.com/<%= @user.github %>">https://github.com/<%= @user.github %></a>
+        <%= image_tag(@image, alt: "Github image", class: "img-github") if @image %>
+      </p>
     <% end %>
-  </p>
-  <p><%= link_to 'New Project', new_project_path, class: "btn btn-success" %></p>
+  </div>
+
+  <div class="col col-md-5">
+    <p>
+      <strong>Projects:</strong>
+      <ul>
+        <% @user.projects.each do |project| %>
+          <li><%= project.name %> <%= link_to 'Show', project, class: "btn btn-default" %></li>
+        <% end %>
+      </ul>
+    </p>
+    <p><%= link_to 'New Project', new_project_path, class: "btn btn-success" %></p>
+  </div>
+
 </div>
+
 <br />
 <div>
   <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-default" %> |

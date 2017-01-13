@@ -157,12 +157,16 @@
             <div class="row">
                 <!-- Profile Pic -->
                 <div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
-                    <img src="assets/my-face.png" alt="my profile">
+                    <% if @user.image_url %>
+                      <%= image_tag(@user.image_url, alt: "Profile image") %>
+                    <% else %>
+                      <img src="assets/my-face.png" alt="my profile">
+                    <% end %>
                 </div>
                 <div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <h2 class="h2"><%= @user.name %></h2>
                     <div class="heading-line"></div>
-                    <p class="introduce">talented web designer / <%= @user.position %></p>
+                    <p class="introduce">talented <%= @user.formation %> / <%= @user.position %></p>
                     <p class="intro">Enthusiastically reintermediate leveraged potentialities and wireless web services. Distinctively maintain ubiquitous best practices through market positioning materials. Progressively reintermediate ubiquitous channels via bricks-and-clicks
                         technology. Distinctively formulate innovative relationships and high standards.</p>
                 </div>

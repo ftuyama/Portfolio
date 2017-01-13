@@ -6,6 +6,7 @@
       <tr>
         <th>Name</th>
         <th>User</th>
+        <th>Description</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -15,6 +16,7 @@
         <tr>
           <td><%= project.name %></td>
           <td><%= project.user.name if project.user %></td>
+          <td><%= project.description.truncate(20) if project.description %></td>
           <td><%= link_to 'Show', project, class: "btn btn-default" %></td>
           <td><%= link_to 'Edit', edit_project_path(project), class: "btn btn-default" %></td>
           <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %></td>
@@ -23,7 +25,10 @@
     </tbody>
   </table>
 </div>
-
+<div class="bottom-button">
+  <%= link_to 'Filter orphans', 'projects?filter=orphans', class: "btn btn-default" %>
+  <%= link_to 'Filter published', 'projects?filter=published', class: "btn btn-default" %>
+</div>
 <br>
 
 <div class="bottom-button">

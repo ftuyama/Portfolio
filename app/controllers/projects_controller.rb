@@ -18,7 +18,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @user = User.try(:find_by_id, session[:session_id])
+    @user = current_user
     @project = Project.new
   end
 

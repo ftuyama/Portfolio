@@ -10,7 +10,6 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    session[:session_id] = @user.id
 		@image = fetch_github_image
   end
 
@@ -79,6 +78,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :name, :image_url, :formation, :position, :github)
+      params.require(:user).permit(:username, :name, :password, :image_url, :formation, :position, :github)
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113182919) do
+ActiveRecord::Schema.define(version: 20170113194048) do
 
   create_table "projects", force: true do |t|
     t.string   "name"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170113182919) do
     t.string   "username"
     t.string   "github"
     t.string   "image_url"
+    t.string   "hashed_password"
   end
 
 end

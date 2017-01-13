@@ -21,7 +21,12 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/alive">Alive</a></li>
-      <li><a href="/">Login</a></li>
+      <% if logged_in? %>
+        <li><%= link_to "#{current_user.name}", current_user %></li>
+        <li><a href="/logout">Logout</a></li>
+      <% else %>
+        <li><a href="/login">Login</a></li>
+      <% end %>
     </ul>
   </div>
 <%= yield %>

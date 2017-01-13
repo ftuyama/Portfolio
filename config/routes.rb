@@ -8,6 +8,11 @@ Rails.application.routes.draw do
     get '/alive' => :alive
   end
 
+  controller 'sessions' do
+    get '/login/' => :new
+    get '/logout/' => :destroy
+    post '/login/' => :auth
+  end
 
   resources :projects
   resources :users

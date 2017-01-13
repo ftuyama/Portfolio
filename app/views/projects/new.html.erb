@@ -2,7 +2,11 @@
 <hr />
 <div class="container">
   <p>
-      Logged as <i><%= @user.name if @user %></i>
+      <% if @user %>
+        Logged as <i><%= @user.name %></i>
+      <% else %>
+        <a href="/login">Login</a>
+      <% end %>
   </p>
   <%= render 'form' %>
 </div>

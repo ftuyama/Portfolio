@@ -121,7 +121,7 @@ $(document).ready(function() {
             var name = $("#name").val(),
                 mail = $("#mail").val(),
                 message = $("#message").val();
-            // Ajax    
+            // Ajax
             $.ajax({
                 type: "POST",
                 url: "php/contact.php",
@@ -170,7 +170,7 @@ $(document).ready(function() {
         accY: -150
     });
 
-    // start easy pie chart plugin when skills section appear // 
+    // start easy pie chart plugin when skills section appear //
     $("#skills").appear(function() {
         $(".chart").easyPieChart({
             barColor: "#eaeaea",
@@ -275,7 +275,7 @@ function init() {
 
         scrollwheel: false,
 
-        // How you would like to style the map. 
+        // How you would like to style the map.
         // This is where you would paste any style found on Snazzy Maps.
         styles: [{
             "featureType": "all",
@@ -390,7 +390,7 @@ function init() {
         }]
     };
 
-    // Get the HTML DOM element that will contain your map 
+    // Get the HTML DOM element that will contain your map
     // We are using a div with id="map" seen below in the <body>
     var mapElement = document.getElementById("map");
 

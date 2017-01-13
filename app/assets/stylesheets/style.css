@@ -246,6 +246,9 @@ nav .logo a {
 .bottom-button {
 	text-align: center;
 }
+.fact-number {
+	padding-top: 35px;
+}
 span.bar {
 	width: 35px;
 	height: 5px;

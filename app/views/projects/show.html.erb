@@ -1,14 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
-<p>
-  <strong>User:</strong>
-  <%= @project.user.name if @project.user %>
-  <%= link_to 'Show', user_path(@project.user), class: "btn btn-default" %>
-</p>
+<h1>Project details</h1>
+<div class="container">
+  <p>
+    <strong>Name:</strong>
+    <%= @project.name %>
+  </p>
+  <% if @project.user %>
+    <p>
+      <strong>User:</strong>
+      <%= @project.user.name %>
+      <%= link_to 'Show', user_path(@project.user), class: "btn btn-default" %>
+    </p>
+  <% else %>
+    <p>
+      <strong>No User associated</strong>
+    </p>
+  <% end %>
+</div>
 
-<%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %> |
-<%= link_to 'Back', projects_path, class: "btn btn-default" %>
+<br />
+<div>
+  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %> |
+  <%= link_to 'Back', projects_path, class: "btn btn-default" %>
+</div>

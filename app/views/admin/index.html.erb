@@ -1,11 +1,16 @@
-<h1>Admin#index</h1>
+<h1>Admin panel</h1>
+<hr />
 
-<h3>Users</h3>
-<% @users.map do |u| %>
-  <p><%= u.name  %></p>
-<% end %>
+<div class="container">
+  <h3>Users</h3>
+  <%= link_to 'Info', users_path, class: "btn btn-info" %>
+  <% @users.map do |u| %>
+    <p><%= u.name  %></p>
+  <% end %>
 
-<h3>Projects</h3>
-<% @projects.map do |p| %>
-  <p><%= p.name  %></p>
-<% end %>
+  <h3>Projects</h3>
+  <%= link_to 'Info', projects_path, class: "btn btn-info" %>
+  <% @projects.map do |p| %>
+    <p><%= p.name  %></p>
+  <% end %>
+</div>

@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
   controller 'admin' do
-      get '/admin/' => :index
-    end
+    get '/admin/' => :index
+  end
+
+  controller 'home' do
+    get '/alive' => :alive
+  end
+
 
   resources :projects
   resources :users

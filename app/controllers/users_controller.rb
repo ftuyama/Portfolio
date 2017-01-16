@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :set_user, only: [:show]
   before_filter :authenticate, :only => [:edit, :update, :destroy]
 
@@ -67,14 +68,6 @@ class UsersController < ApplicationController
   end
 
   private
-    def fetch_github_image
-      if @user.github
-        profile_json = RestClient.get('https://api.github.com/users/' + @user.github)
-        profile = JSON.parse(profile_json)
-        profile['avatar_url']
-      end
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

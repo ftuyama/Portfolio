@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   controller 'home' do
     get '/alive/' => :alive
+    post '/send_email' => :send_email
   end
 
   controller 'sessions' do

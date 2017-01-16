@@ -1,4 +1,5 @@
 class HomeController < ApplicationController
+	skip_before_filter :verify_authenticity_token
 
 	def index
 		# Gets user from URL parameter
@@ -8,6 +9,11 @@ class HomeController < ApplicationController
 	end
 
 	def alive
+	end
+
+	def send_email
+		Contact.email_me(params[:name], params[:mail], params[:message])
+		render text: "success", status: 200
 	end
 
 	private

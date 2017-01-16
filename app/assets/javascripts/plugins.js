@@ -124,7 +124,7 @@ $(document).ready(function() {
             // Ajax
             $.ajax({
                 type: "POST",
-                url: "php/contact.php",
+                url: "/send_email/",
                 data: "name=" + name + "&mail=" + mail + "&message=" + message,
                 beforeSend: function(text) {
                     $(".submit-btn").html("Sending...");

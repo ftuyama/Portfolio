@@ -29,6 +29,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# Timezone info
 gem "tzinfo-data"
 # Session storage
 gem 'activerecord-session_store'

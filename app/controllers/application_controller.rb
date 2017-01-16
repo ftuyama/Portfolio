@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     # Filter method to enforce a login requirement
     # Apply as a before_filter on any controller you want to protect
     def authenticate
-      logged_in? ? true : access_denied
+      logged_in? ? true : not_logged
     end
 
     # Predicate method to test for a logged user
@@ -26,8 +26,14 @@ class ApplicationController < ActionController::Base
 
     helper_method :logged_in?
 
-    def access_denied
+    def not_logged
       redirect_to login_path, :notice => "Please log in to continue" and return false
     end
+
+    def access_denied
+      redirect_to '/users', :notice => "Access Denied: Your user don't have permission."
+    end
+
+    helper_method :access_denied
 
 end

@@ -23,6 +23,10 @@
       <strong>Position:</strong>
       <%= @user.position %>
     </p>
+    <p>
+      <strong>Website:</strong>
+      <a href="/?user=<%= @user.username %>">@<%= @user.username %></a>
+    </p>
     <% if @user.github %>
       <p>
         <strong>Github</strong>
@@ -41,13 +45,19 @@
         <% end %>
       </ul>
     </p>
-    <p><%= link_to 'New Project', new_project_path, class: "btn btn-success" %></p>
+    <% if @user == current_user %>
+      <p><%= link_to 'New Project', new_project_path, class: "btn btn-success" %></p>
+    <% end %>
   </div>
 
 </div>
 
 <br />
-<div>
-  <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-default" %> |
-  <%= link_to 'Back', users_path, class: "btn btn-default" %>
+
+<div class="bottom-button">
+  <% if @user == current_user %>
+    <%= link_to 'Edit', edit_user_path(@user), class: "btn btn-default" %>
+    <%= link_to 'Destroy', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  <% end %>
+  <%= link_to 'Back', users_path, class: "btn btn-default button-center" %>
 </div>

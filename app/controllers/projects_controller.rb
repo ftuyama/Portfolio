@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate, :only => [:edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -24,6 +25,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1/edit
   def edit
+    set_user_project
   end
 
   # POST /projects
@@ -46,6 +48,7 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    set_user_project
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
@@ -60,6 +63,7 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
+    set_user_project
     @project.destroy
     respond_to do |format|
       format.html { redirect_to projects_url, notice: 'Project was successfully destroyed.' }
@@ -71,6 +75,12 @@ class ProjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_project
       @project = Project.find(params[:id])
+    end
+
+    def set_user_project
+      @project = current_user.projects.find(params[:id])
+      rescue ActiveRecord::RecordNotFound
+      access_denied
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

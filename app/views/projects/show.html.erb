@@ -25,7 +25,10 @@
 </div>
 
 <br />
-<div>
-  <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %> |
+<div class="bottom-button">
+  <% if @project.user && @project.user == current_user %>
+    <%= link_to 'Edit', edit_project_path(@project), class: "btn btn-default" %>
+    <%= link_to 'Destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+  <% end %>
   <%= link_to 'Back', projects_path, class: "btn btn-default" %>
 </div>

@@ -20,7 +20,6 @@
       <li><a href="/projects">Projects</a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="/alive">Alive</a></li>
       <% if logged_in? %>
         <li><%= link_to "#{current_user.name}", current_user %></li>
         <li><a href="/logout">Logout</a></li>

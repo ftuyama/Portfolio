@@ -5,13 +5,17 @@ Rails.application.routes.draw do
   end
 
   controller 'home' do
-    get '/alive' => :alive
+    get '/alive/' => :alive
   end
 
   controller 'sessions' do
     get '/login/' => :new
     get '/logout/' => :destroy
     post '/login/' => :auth
+  end
+
+  controller 'users' do
+    get '/manage/' => :manage
   end
 
   resources :projects

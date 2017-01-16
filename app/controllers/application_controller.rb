@@ -31,7 +31,7 @@ class ApplicationController < ActionController::Base
     end
 
     def access_denied
-      redirect_to '/users', :notice => "Access Denied: Your user don't have permission."
+      redirect_to users_path, :notice => "Access Denied: Your user don't have permission."
     end
 
     helper_method :access_denied

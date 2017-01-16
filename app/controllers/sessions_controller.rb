@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def new
     if logged_in?
-      redirect_to "/users", :notice => "You are already logged in"
+      redirect_to users_path, :notice => "You are already logged in"
     end
   end
 
@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     @error = "entered auth"
     if user = User.authenticate(params[:username], params[:password])
       session[:session_id] = user.id
-      redirect_to '/users', :notice => "Logged in successfully"
+      redirect_to users_path, :notice => "Logged in successfully"
     else
       @error = "Invalid login/password combination"
       render :action => 'new'
@@ -19,6 +19,6 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to "/users", :notice => "Logged out successfully"
+    redirect_to users_path, :notice => "Logged out successfully"
   end
 end

@@ -1,7 +1,6 @@
-== README
+== Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This Portfolio application was built using Ruby on Rails framework and modern web libraries, such as jquery and bootstrap. The application purpose is providing the user a beautiful portfolio template.
 
 Things you may want to cover:
 

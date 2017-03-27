@@ -1,47 +1,7 @@
 <html lang="en" style="overflow: hidden;">
 
 <head>
-    <style type="text/css">
-        .gm-style .gm-style-mtc label,
-        .gm-style .gm-style-mtc div {
-            font-weight: 400
-        }
-    </style>
     <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-    <style type="text/css">
-        .gm-style .gm-style-cc span,
-        .gm-style .gm-style-cc a,
-        .gm-style .gm-style-mtc div {
-            font-size: 10px
-        }
-    </style>
-    <style type="text/css">
-        @media print {
-            .gm-style .gmnoprint,
-            .gmnoprint {
-                display: none
-            }
-        }
-
-        @media screen {
-            .gm-style .gmnoscreen,
-            .gmnoscreen {
-                display: none
-            }
-        }
-    </style>
-    <style type="text/css">
-        .gm-style {
-            font-family: Roboto, Arial, sans-serif;
-            font-size: 11px;
-            font-weight: 400;
-            text-decoration: none
-        }
-
-        .gm-style img {
-            max-width: none
-        }
-    </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,8 +27,6 @@
     <%= stylesheet_link_tag 'animate.css' %>
     <!-- Owl carousel css file -->
     <%= stylesheet_link_tag 'owl.carousel.css' %>
-    <!-- Bootstrap file -->
-    <%= stylesheet_link_tag 'bootstrap.min.css' %>
     <!-- Custom styles css file -->
     <%= stylesheet_link_tag 'style.css' %>
 
@@ -76,20 +34,6 @@
 		     %>html5shiv.js"></script>
 			<script src="js/respond.js"></script>
 		<![endif]-->
-
-    <style type="text/css">
-         :root #header+#content>#left>#rlblock_left {
-            display: none !important;
-        }
-    </style>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/common.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/map.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/util.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/marker.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/infowindow.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/onion.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/stats.js"></script>
-    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/controls.js"></script>
 </head>
 
 <body style="overflow: hidden;">
@@ -178,7 +122,7 @@
                     <div class="personal-wrapper">
                         <span><strong>name: </strong><%= @user.name %></span>
                         <span><strong>E-mail: </strong><%= @user.username %>@gmail.com</span>
-                        <span><strong>phone number: </strong>+(555) 176 245 221</span>
+                        <span><strong>phone number: </strong>+(31) 98554 5671</span>
                         <span><strong>website: </strong><a href="https://github.com/<%= @user.github %>">www.github.com/<%= @user.github %></a></span>
                     </div>
                 </div>
@@ -187,19 +131,19 @@
                     <div class="accordion">
                         <div class="acc-item">
                             <div class="acc-title"><i class="ion-android-navigate"></i> Who am i?</div>
-                            <div class="acc-content">Monotonectally iterate B2C solutions for interactive solutions. Uniquely synergize client-based channels vis-a-vis robust meta-services. Uniquely leverage other's multidisciplinary web-readiness after optimal.</div>
+                            <div class="acc-content">I'm a young developer interested in meeting new awesome people and also learning new technologies. Since my first code, I'm fascinated by computing, I hope my skills will be useful to other people someday.</div>
                         </div>
                         <div class="acc-item">
                             <div class="acc-title"><i class="ion-android-navigate"></i> What I'm really good at?</div>
-                            <div class="acc-content">Efficiently formulate cross-unit partnerships whereas an expanded array of infrastructures. Intrinsicly whiteboard extensible markets before just.</div>
+                            <div class="acc-content">Efficiently formulate solutions using logical approach to the problems. I'm a fast learner and thinker, using my knowledge to design the best strategy ever.</div>
                         </div>
                         <div class="acc-item">
                             <div class="acc-title"><i class="ion-android-navigate"></i> How can you contact me?</div>
-                            <div class="acc-content">Proactively empower cutting-edge web services via virtual methodologies. Assertively foster cross-unit benefits via premier mindshare. Proactively target customized channels and team building catalysts.</div>
+                            <div class="acc-content">Simply send me an email or call me on whatsapp. I'd be pleased to discuss some interesting project proposal or revolutionary idea.</div>
                         </div>
                         <div class="acc-item">
                             <div class="acc-title"><i class="ion-android-navigate"></i> What is my hobbies</div>
-                            <div class="acc-content">Compellingly evisculate standardized metrics with 2.0 value. Professionally impact magnetic technologies without.</div>
+                            <div class="acc-content">I really like to spend time surfing on the net, being with my family inside the country. And of course, play videogames and Pokémon with my cousin and brother.</div>
                         </div>
                     </div>
                     <!-- End Accordion -->
@@ -315,28 +259,32 @@
                     <div class="chart center" data-percent="88">
                         <span><span id="chart_num_1">0</span> %</span>
                     </div>
-                    <h2>html5</h2>
+                    <h2>Ruby on Rails</h2>
+                    <h2>Django</h2>
                 </div>
                 <!-- main skill No. 2 -->
                 <div class="skill col-md-3 col-sm-6">
-                    <div class="chart center" data-percent="95">
+                    <div class="chart center" data-percent="63">
                         <span><span id="chart_num_2">0</span> %</span>
                     </div>
-                    <h2>css3</h2>
+                    <h2>Angular.js</h2>
+                    <h2>Node.js</h2>
                 </div>
                 <!-- main skill No. 3 -->
                 <div class="skill col-md-3 col-sm-6">
                     <div class="chart center" data-percent="73">
                         <span><span id="chart_num_3">0</span> %</span>
                     </div>
-                    <h2>javascript</h2>
+                    <h2>Objective-C</h2>
+                    <h2>Mobile iOS</h2>
                 </div>
                 <!-- main skill No. 4 -->
                 <div class="skill col-md-3 col-sm-6">
-                    <div class="chart center" data-percent="55">
+                    <div class="chart center" data-percent="45">
                         <span><span id="chart_num_4">0</span> %</span>
                     </div>
-                    <h2>php</h2>
+                    <h2>Deep Learning</h2>
+                    <h2>AI</h2>
                 </div>
             </div>
             <!-- End main skills -->
@@ -349,8 +297,8 @@
                     <!-- Skill No. 1 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-1" data-max="100">
                         <p class="b_label">communication</p>
-                        <div class=" bar_group__bar thick elastic" data-value="85" data-tooltip="true" data-label="communication" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>85</span>
+                        <div class=" bar_group__bar thick elastic" data-value="75" data-tooltip="true" data-label="communication" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>75</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -360,8 +308,8 @@
                     <!-- Skill No. 2 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-2" data-max="100">
                         <p class="b_label">organization</p>
-                        <div class=" bar_group__bar thick elastic" data-value="80" data-tooltip="true" data-label="organization" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>80</span>
+                        <div class=" bar_group__bar thick elastic" data-value="85" data-tooltip="true" data-label="organization" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>85</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -382,8 +330,8 @@
                     <!-- Skill No. 4 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-4" data-max="100">
                         <p class="b_label">programming</p>
-                        <div class=" bar_group__bar thick elastic" data-value="65" data-tooltip="true" data-label="programming" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>65</span>
+                        <div class=" bar_group__bar thick elastic" data-value="85" data-tooltip="true" data-label="programming" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>85</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -393,8 +341,8 @@
                     <!-- Skill No. 5 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-5" data-max="100">
                         <p class="b_label">planning</p>
-                        <div class=" bar_group__bar thick elastic" data-value="70" data-tooltip="true" data-label="planning" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>70</span>
+                        <div class=" bar_group__bar thick elastic" data-value="80" data-tooltip="true" data-label="planning" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>80</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -404,8 +352,8 @@
                     <!-- Skill No. 6 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-6" data-max="100">
                         <p class="b_label">learning</p>
-                        <div class=" bar_group__bar thick elastic" data-value="80" data-tooltip="true" data-label="learning" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>80</span>
+                        <div class=" bar_group__bar thick elastic" data-value="95" data-tooltip="true" data-label="learning" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>95</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -426,8 +374,8 @@
                     <!-- Skill No. 8 -->
                     <div class="bar_group col-md-6 col-xs-12 group_ident-8" data-max="100">
                         <p class="b_label">ux-design</p>
-                        <div class=" bar_group__bar thick elastic" data-value="90" data-tooltip="true" data-label="ux-design" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
-                            <div class="b_tooltip"><span>90</span>
+                        <div class=" bar_group__bar thick elastic" data-value="60" data-tooltip="true" data-label="ux-design" data-show-values="true" data-unit="%" style="margin-bottom: 40px;">
+                            <div class="b_tooltip"><span>60</span>
                                 <div class="b_tooltip--tri"></div>
                             </div>
                             <p class="bar_label_min">0 %</p>
@@ -458,10 +406,10 @@
                         <i class="ion-university"></i>
                     </div>
                     <div class="content left round-corners">
-                        <h3>Ulzarod</h3>
-                        <span class="duration">( Feb. 2004 : June 2008 )</span>
-                        <span class="job-title"> junior UX designer</span>
-                        <p>Distinctively empower flexible interfaces with high-quality catalysts for change. Synergistically extend superior materials before exceptional customer service. Dramatically plagiarize sticky intellectual capital whereas vertical.</p>
+                        <h3>ITA</h3>
+                        <span class="duration">( Jan. 2013 : Dec 2017 )</span>
+                        <span class="job-title"> Computer Engineer</span>
+                        <p>After some years of study and dedication, participating and wining awards on national physics olimpiads, I finally started studying at ITA (institute of aeronautical technology).</p>
                     </div>
                 </div>
                 <!-- Event No. 2 -->
@@ -470,34 +418,23 @@
                         <i class="ion-briefcase"></i>
                     </div>
                     <div class="content right round-corners">
-                        <h3>Lexona Co</h3>
-                        <span class="duration">( Aug. 2008 : Mar. 2010 )</span>
-                        <span class="job-title"> visual designer</span>
-                        <p>Credibly architect visionary benefits vis-a-vis functional e-business. Uniquely cultivate client-based process improvements via diverse models. Objectively orchestrate alternative expertise.</p>
+                        <h3>Guichê Virtual</h3>
+                        <span class="duration">( Jan. 2016 : Dec. 2016  )</span>
+                        <span class="job-title"> Mobile developer</span>
+                        <p>In the first semester, I joined the mobile team in order to create an ios app from scratch for Guichê Virtual, using xcode framework using objective-c language. </p>
+                        <p>Then I decided to join the backend team. I worked with spring framework and groovy language in order to develop new features to the internal site of the company, helping the operational team.</p>
                     </div>
                 </div>
                 <!-- Event No. 3 -->
                 <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
-                        <i class="ion-cube"></i>
+                        <i class="ion-briefcase"></i>
                     </div>
                     <div class="content left round-corners">
-                        <h3>master arts</h3>
-                        <span class="duration">( May 2010 : Sep. 2013 )</span>
-                        <span class="job-title"> visual / uI designer</span>
-                        <p>Credibly architect visionary benefits vis-a-vis functional e-business. Uniquely cultivate client-based process improvements via diverse models. Objectively orchestrate alternative expertise.</p>
-                    </div>
-                </div>
-                <!-- Event No. 4 -->
-                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
-                    <div class="icon">
-                        <i class="ion-star"></i>
-                    </div>
-                    <div class="content right round-corners">
-                        <h3>Matrix Media</h3>
-                        <span class="duration">( 2014 : NOW )</span>
-                        <span class="job-title"> visual / uI designer</span>
-                        <p>Monotonectally benchmark ubiquitous relationships rather than professional convergence. Assertively mesh cross-media metrics rather than adaptive platforms. Distinctively communicate superior.</p>
+                        <h3>Quero Bolsa</h3>
+                        <span class="duration">( Jan. 2017 : NOW )</span>
+                        <span class="job-title"> Full-Stack Web Developer</span>
+                        <p>Internship as a full-stack web developer using Ruby on Rails framework and agile software development. Joined the content team to improve and completely refactor the team’s section on the site, using technologies such as Sidekiq, Chef recipes and Docker.</p>
                     </div>
                 </div>
             </div>
@@ -519,7 +456,7 @@
     <!-- End Quote Section -->
 
     <!-- Start Portfolio Section -->
-    <div class="portfolio center" id="portfolio">
+    <div class="portfolio center hidden" id="portfolio">
         <div class="container">
             <!-- Title -->
             <div>
@@ -709,7 +646,7 @@
     <!-- End Portfolio Section -->
 
     <!-- Start Testmonials Section -->
-    <div class="testmonials center" id="testmonials">
+    <div class="testmonials center hidden" id="testmonials">
         <div class="overlay"></div>
         <div class="pattern"></div>
         <div class="container">
@@ -940,31 +877,31 @@
                     <i class="ion-ios-telephone center"></i>
                     <div class="info-content">
                         <h3>call me</h3>
-                        <span>( +1 ) 123 455 564 0</span>
-                        <span>( +1 ) 123 750 317 0</span>
+                        <span>( +55 ) 31 98554 5671</span>
+                        <span>( +55 ) 31 3426 5671</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 info">
                     <i class="ion-email center"></i>
                     <div class="info-content">
                         <h3>Send a message</h3>
-                        <span>info@marqa.com</span>
-                        <span>admin@marqa.com</span>
+                        <span><%= @user.username %>@gmail.com</span>
+                        <span>Github: <%= @user.github %></span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 info">
                     <i class="ion-android-home center"></i>
                     <div class="info-content">
                         <h3>Visit me</h3>
-                        <span>Street 227, Ismailia,</span><span>Egypt</span>
+                        <span>São José dos Campos,</span><span>Brazil</span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 info">
                     <i class="ion-ios-clock center"></i>
                     <div class="info-content">
                         <h3>Work time</h3>
-                        <span>Sat - Wed : 07.00 - 16.00 </span>
-                        <span>Thursday : 08.00 - 14.00 </span>
+                        <span>Weekday : 12.00 - 20.00 </span>
+                        <span>Weekend : 12.00 - 16.00 </span>
                     </div>
                 </div>
             </div>
@@ -1178,83 +1115,6 @@
     </div>
     <!-- End Contact Section -->
 
-    <!-- Start Partners Section -->
-    <div class="partners">
-        <div class="container">
-            <div class="partners-owl-carousel owl-carousel owl-theme owl-responsive-1000 owl-loaded">
-
-
-
-
-
-
-
-                <div class="owl-stage-outer">
-                    <div class="owl-stage" style="transform: translate3d(-2300px, 0px, 0px); transition: 0.25s; width: 3910px;">
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/codecanyon-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/graphicriver-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/photodune-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/themeforest-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/videohive-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/3docean-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/audiojungle-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/codecanyon-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/graphicriver-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/photodune-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item active" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/themeforest-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item active" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/videohive-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned active" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/3docean-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned active" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/audiojungle-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned active" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/codecanyon-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/graphicriver-logo.png" alt="partner"></div>
-                        </div>
-                        <div class="owl-item cloned" style="width: 220px; margin-right: 10px;">
-                            <div class="partner"><img src="assets/brands/photodune-logo.png" alt="partner"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-controls">
-                    <div class="owl-nav">
-                        <div class="owl-prev" style="display: none;">prev</div>
-                        <div class="owl-next" style="display: none;">next</div>
-                    </div>
-                    <div class="owl-dots" style="display: none;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Partners Section -->
 
     <!-- Start Footer Section -->
     <div class="footer center">
@@ -1267,8 +1127,8 @@
                         <a href="#" class="icon fb ion-social-facebook"></a>
                         <a href="#" class="icon tw ion-social-twitter"></a>
                         <a href="https://github.com/<%= @user.github %>" class="icon gh ion-social-github"></a>
-                        <a href="#" class="icon gp ion-social-googleplus"></a>
-                        <a href="#" class="icon li ion-social-linkedin"></a>
+                        <a href="https://plus.google.com/102466688454578137203" class="icon gp ion-social-googleplus"></a>
+                        <a href="https://br.linkedin.com/in/felipe-tuyama-306529b2" class="icon li ion-social-linkedin"></a>
                         <a href="#" class="icon pin ion-social-pinterest"></a>
                     </div>
                 </div>
@@ -1291,7 +1151,14 @@
     <div id="scroll"></div>
     <!-- End scroll percentage -->
 
-
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/common.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/map.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/util.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/marker.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/infowindow.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/onion.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/stats.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/27/8/intl/pt_br/controls.js"></script>
 
     <!-- Including jQuery file -->
     <%= javascript_include_tag "jquery-1.12.1.min.js" %>

@@ -18,6 +18,6 @@ class HomeController < ApplicationController
 
 	private
 		def default_user
-			User.find_by_username("ftuyama") || User.create(:username => "ftuyama", :name => "Felipe Tuyama")
+			User.find_by_username("ftuyama") || User.create(:username => "ftuyama", :name => "Felipe Tuyama", :password => "123", :password_confirmation => "123")
 		end
 end

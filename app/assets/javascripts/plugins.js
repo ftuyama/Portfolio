@@ -107,40 +107,40 @@ $(document).ready(function() {
     });
 
     // Form Validation in contact section //
-    $("#contact-form").validator().on("submit", function (e) {
-            if(e.isDefaultPrevented()) {
-                $(".form-response").text("Sorry, you didn't fill the form.").fadeIn(1000);
-            } else {
-                e.preventDefault();
-                submitForm();
+    $("#contact-form").validator().on("submit", function(e) {
+        if (e.isDefaultPrevented()) {
+            $(".form-response").text("Sorry, you didn't fill the form.").fadeIn(1000);
+        } else {
+            e.preventDefault();
+            submitForm();
+        }
+    });
+
+    function submitForm() {
+        // Some Variables
+        var name = $("#name").val(),
+            mail = $("#mail").val(),
+            message = $("#message").val();
+        // Ajax
+        $.ajax({
+            type: "POST",
+            url: "/send_email/",
+            data: "name=" + name + "&mail=" + mail + "&message=" + message,
+            beforeSend: function(text) {
+                $(".submit-btn").html("Sending...");
+                $(".form-response").fadeOut(500).text("");
+            },
+            success: function(text) {
+                if (text == "success") {
+                    $("#contact-form")[0].reset();
+                    $(".form-response").text("Thanks! Your message sent correctly.").fadeIn(1000);
+                    $(".submit-btn").html("Send Message");
+                } else {
+                    $(".form-response").text(text).fadeIn(1000);
+                }
             }
         });
-
-        function submitForm() {
-            // Some Variables
-            var name = $("#name").val(),
-                mail = $("#mail").val(),
-                message = $("#message").val();
-            // Ajax
-            $.ajax({
-                type: "POST",
-                url: "/send_email/",
-                data: "name=" + name + "&mail=" + mail + "&message=" + message,
-                beforeSend: function(text) {
-                    $(".submit-btn").html("Sending...");
-                    $(".form-response").fadeOut(500).text("");
-                },
-                success: function (text) {
-                    if(text == "success") {
-                        $("#contact-form")[0].reset();
-                        $(".form-response").text("Thanks! Your message sent correctly.").fadeIn(1000);
-                        $(".submit-btn").html("Send Message");
-                    } else {
-                        $(".form-response").text(text).fadeIn(1000);
-                    }
-                }
-            });
-        }
+    }
     // Moving placeholder on focus in contact-me section //
     $(".contact .form-control").focusout(function() {
         var textValue = $(this).val();
@@ -154,16 +154,16 @@ $(document).ready(function() {
     // Start numbers animate at fun-facts section //
     $("#facts").appear(function() {
         $("#number_1").animateNumber({
-            number: 6853
+            number: 68530
         }, 2200);
         $("#number_2").animateNumber({
-            number: 120
+            number: 32
         }, 2200);
         $("#number_3").animateNumber({
-            number: 345
+            number: 315
         }, 2200);
         $("#number_4").animateNumber({
-            number: 195
+            number: 10000
         }, 2200);
     }, {
         accX: 0,
@@ -186,13 +186,13 @@ $(document).ready(function() {
             number: 88
         }, 1500);
         $("#chart_num_2").animateNumber({
-            number: 95
+            number: 63
         }, 1500);
         $("#chart_num_3").animateNumber({
             number: 73
         }, 1500);
         $("#chart_num_4").animateNumber({
-            number: 55
+            number: 45
         }, 1500);
     }, {
         accX: 0,
@@ -268,10 +268,10 @@ function init() {
     // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
     var mapOptions = {
         // How zoomed in you want the map to start at (always required)
-        zoom: 17,
+        zoom: 14,
 
         // The latitude and longitude to center the map (always required)
-        center: new google.maps.LatLng(30.609788, 32.268555),
+        center: new google.maps.LatLng(-23.20227, -45.90181),
 
         scrollwheel: false,
 

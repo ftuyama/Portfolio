@@ -10,39 +10,41 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :image_url %><br>
-    <%= f.text_field :image_url %>
-  </div>
-  <div class="field">
-    <%= f.label :formation %><br>
-    <%= f.text_field :formation %>
-  </div>
-  <div class="field">
-    <%= f.label :position %><br>
-    <%= f.text_field :position %>
-  </div>
-  <div class="field">
-    <%= f.label :github %> (username)<br>
-    <%= f.text_field :github %>
-  </div>
-  <div class="actions">
-    <%= f.submit "Update", :class => "btn btn-success" %>
+  <div class="col-sm-4 col-xs-12 col-offset-sm-1">
+    <div class="field">
+      <%= f.label :username %><br />
+      <%= f.text_field :username, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :name %><br>
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :image_url %><br>
+      <%= f.text_field :image_url, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :formation %><br>
+      <%= f.text_field :formation, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :position %><br>
+      <%= f.text_field :position, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :github %> (username)<br>
+      <%= f.text_field :github, :class => 'form-control' %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Update", :class => "btn btn-success" %>
+    </div>
   </div>
 <% end %>

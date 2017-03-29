@@ -1,7 +1,7 @@
 <div class="mix <%= project.kind %> col-md-3 col-sm-6 col-xs-6" data-my-order="<%= number %>" style="display: inline-block;" data-bound="">
     <div class="img-wrapper overlay-slide-right center">
         <% if project.image.present? %>
-          <img src="assets/projects/<%= project.image %>.jpg" class="center-block img-responsive" alt="<%= project.image %>">
+          <img src="assets/projects/<%= project.image %>.jpg" class="center-block img-responsive project-image" alt="<%= project.image %>">
         <% else %>
           <img src="assets/large/0<%= number %>.jpg" class="center-block img-responsive" alt="project">
         <% end %>
@@ -16,7 +16,7 @@
                 <div class="heading-line"></div><br>
                 <%= link_to "Github: #{project.name}", "https://github.com/#{project.github_url}", :class => 'black-link' %>
                 <% if project.image.present? %>
-                  <img src="assets/projects/<%= project.image %>.jpg" class="center-block img-responsive" alt="<%= project.image %>">
+                  <img src="assets/projects/<%= project.image %>.jpg" class="center-block img-responsive project-image" alt="<%= project.image %>">
                 <% else %>
                   <img src="assets/large/0<%= number %>.jpg" class="center-block img-responsive" alt="project">
                 <% end %>

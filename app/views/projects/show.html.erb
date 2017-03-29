@@ -22,6 +22,22 @@
       <strong>No User associated</strong>
     </p>
   <% end %>
+  <p>
+    <strong>Github:</strong>
+    <%= link_to "https://github.com/#{@project.github_url}" %>
+  </p>
+  <p>
+    <strong>Url:</strong>
+    <%= link_to @project.url %>
+  </p>
+  <p>
+    <strong>Image:</strong>
+    <%= @project.image %>
+  </p>
+  <p>
+    <strong>Kind:</strong>
+    <%= @project.kind %>
+  </p>
 </div>
 
 <br />

@@ -20,8 +20,24 @@
       <%= f.text_area :description, :class => 'form-control' %>
     </div>
     <div class="field">
+      <%= f.label :github_url %><br />
+      <%= f.text_field :github_url, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :url %><br />
+      <%= f.text_field :url, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.text_field :image, :class => 'form-control' %>
+    </div>
+    <div class="field">
+      <%= f.label :kind %><br>
+      <%= f.collection_select :kind, ['WEB', 'APP', 'OTHER'], :to_s, :to_s, {}, class: 'form-control' %>
+    </div>
+    <div class="field">
       <%= f.label :user_id %><br>
-      <%= f.collection_select :user_id, User.order(:name), :id, :name %>
+      <%= f.collection_select :user_id, User.order(:name), :id, :name, {}, class: 'form-control' %>
     </div>
     <div class="actions">
       <%= f.submit 'Update', :class => 'btn btn-success' %>

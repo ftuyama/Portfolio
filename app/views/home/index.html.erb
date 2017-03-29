@@ -58,7 +58,7 @@
                     <p>Hello, It's me</p>
                     <h1><%= @user.name %></h1>
                     <p><%= @user.formation %> - <%= @user.position %></p>
-                    <a href="#about-me">Read more</a>
+                    <%= link_to "Resume .pdf", asset_path("resume.pdf") %>
                     <a href="#portfolio">my works</a>
                 </div>
                 <!-- End container -->
@@ -456,7 +456,7 @@
     <!-- End Quote Section -->
 
     <!-- Start Portfolio Section -->
-    <div class="portfolio center hidden" id="portfolio">
+    <div class="portfolio center" id="portfolio">
         <div class="container">
             <!-- Title -->
             <div>
@@ -467,179 +467,14 @@
             <!-- Mixitup controls -->
             <div class="controls">
                 <button class="filter round-corners active" data-filter="all" data-content="All">All</button>
-                <button class="filter round-corners" data-filter=".photos" data-content="PHOTOS">PHOTOS</button>
-                <button class="filter round-corners" data-filter=".branding" data-content="BRANDING">BRANDING</button>
-                <button class="filter round-corners" data-filter=".illustration" data-content="ILLUSTRATION">ILLUSTRATION</button>
+                <button class="filter round-corners" data-filter=".web" data-content="WEB">WEB</button>
+                <button class="filter round-corners" data-filter=".app" data-content="APP">APP</button>
+                <button class="filter round-corners" data-filter=".other" data-content="OTHER">OTHER</button>
             </div>
             <div id="Container">
-                <!-- Project No. 1 -->
-                <div class="mix branding col-md-3 col-sm-6 col-xs-6" data-my-order="1" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/02.jpg" class="center-block img-responsive" alt="project 1">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-1" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-1" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( branding )</p>
-                                <img src="assets/large/02.jpg" class="center-block img-responsive" alt="project 1">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. <br>Proactively maximize transparent e-commerce before fully tested niche markets. Efficiently innovate stand-alone markets with open-source interfaces.
-                                    Compellingly simplify multifunctional intellectual capital and backward-compatible "outside the box".</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 2 -->
-                <div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="2" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/01.jpg" class="center-block img-responsive" alt="project 2">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-2" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-2" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( photos )</p>
-                                <img src="assets/large/01.jpg" class="center-block img-responsive" alt="project 2">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 3 -->
-                <div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="3" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/03.jpg" class="center-block img-responsive" alt="project 3">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-3" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-3" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( illustration )</p>
-                                <img src="assets/large/03.jpg" class="center-block img-responsive" alt="project 3">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 4 -->
-                <div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="4" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/04.jpg" class="center-block img-responsive" alt="project 4">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-4" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-4" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( photos )</p>
-                                <img src="assets/large/04.jpg" class="center-block img-responsive" alt="project 4">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 5 -->
-                <div class="mix branding col-md-3 col-sm-6 col-xs-6" data-my-order="5" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/05.jpg" class="center-block img-responsive" alt="project 5">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-5" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-5" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( branding )</p>
-                                <img src="assets/large/05.jpg" class="center-block img-responsive" alt="project 5">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 6 -->
-                <div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="6" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/06.jpg" class="center-block img-responsive" alt="project 6">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-6" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-6" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( illustration )</p>
-                                <img src="assets/large/06.jpg" class="center-block img-responsive" alt="project 6">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 7 -->
-                <div class="mix photos col-md-3 col-sm-6 col-xs-6" data-my-order="7" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/02.jpg" class="center-block img-responsive" alt="project 7">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-7" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-7" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( photos )</p>
-                                <img src="assets/large/02.jpg" class="center-block img-responsive" alt="project 7">
-                                <p>You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project No. 8 -->
-                <div class="mix illustration col-md-3 col-sm-6 col-xs-6" data-my-order="8" style="display: inline-block;" data-bound="">
-                    <div class="img-wrapper overlay-slide-right center">
-                        <img src="assets/large/01.jpg" class="center-block img-responsive" alt="project 8">
-                        <div class="overlay-content">
-                            <span>project name</span>
-                            <a href="#test-popup-8" class="open-popup-link">
-                                <i class="ion-android-search"></i>
-                            </a>
-                            <!-- popUp content -->
-                            <div id="test-popup-8" class="white-popup mfp-hide">
-                                <h3>project title</h3>
-                                <div class="heading-line"></div>
-                                <p class="cat">( illustration )</p>
-                                <img src="assets/large/01.jpg" class="center-block img-responsive" alt="project 8">
-                                <p class="left">You may put any HTML here. This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will
-                                    be sorely disappointed.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              <% @user.projects.each_with_index do |project, i| %>
+                <%= render :partial => 'project', :locals => { :project => project, :number => (i%6+1) } %>
+              <% end %>
             </div>
         </div>
     </div>
@@ -1026,13 +861,13 @@
                     </div>
                     <div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;">
                         <a target="_blank" href="https://maps.google.com/maps?ll=30.609788,32.268555&amp;z=17&amp;t=m&amp;hl=pt-BR&amp;gl=US&amp;mapclient=apiv3" title="Clique para ver esta área no Google Maps" style="position: static; overflow: visible; float: none; display: inline;">
-                            <div style="width: 66px; height: 26px; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/google_white5.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; user-select: none; border: 0px; padding: 0px; margin: 0px;"></div>
+                            <div style="width: 66px; height: 26px; cursor: pointer;"></div>
                         </a>
                     </div>
                     <div style="background-color: white; padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 533px; top: 160px;">
                         <div style="padding: 0px 0px 10px; font-size: 16px;">Dados do mapa</div>
                         <div style="font-size: 13px;">Dados cartográficos ©2017 Google, ORION-ME</div>
-                        <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                        <div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"></div>
                     </div>
                     <div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 79px; bottom: 0px; width: 220px;">
                         <div draggable="false" class="gm-style-cc" style="user-select: none; height: 14px; line-height: 14px;">
@@ -1065,28 +900,28 @@
                         <div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;">
                             <div draggable="false" style="user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; background-color: rgb(255, 255, 255); width: 28px; height: 55px;">
                                 <div title="Aumentar o zoom" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
-                                    <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div>
+                                    <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"></div>
                                 </div>
                                 <div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; background-color: rgb(230, 230, 230); top: 0px;"></div>
                                 <div title="Diminuir o zoom" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;">
-                                    <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none; width: 120px; height: 54px;"></div>
+                                    <div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"></div>
                                 </div>
                             </div>
                         </div>
                         <div class="gm-svpc" controlwidth="28" controlheight="28" style="background-color: rgb(255, 255, 255); box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default; position: absolute; left: 0px; top: 0px;">
                             <div style="position: absolute; left: 1px; top: 1px;"></div>
                             <div style="position: absolute; left: 1px; top: 1px;">
-                                <div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                <div aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"></div>
                                 <div
-                                    aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                    aria-label="O Pegman está sobre o mapa" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"></div>
                             <div
-                                aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                                aria-label="Controle do Pegman no Street View" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"></div>
                     </div>
                 </div>
                 <div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;">
-                    <div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                    <div title="Girar o mapa em 90 graus" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; background-color: rgb(255, 255, 255); display: none;"></div>
                     <div
-                        class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="https://maps.gstatic.com/mapfiles/api-3/assets/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div>
+                        class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"></div>
             </div>
         </div>
         <div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;">
@@ -1166,6 +1001,8 @@
     <%= javascript_include_tag "jquery.appear.js" %>
     <!-- Bootstrap js file -->
     <%= javascript_include_tag "bootstrap.min.js" %>
+    <!-- Bootstrap js file -->
+    <%= javascript_include_tag "navbar.js" %>
     <!-- easy pie chart -->
     <%= javascript_include_tag "jquery.easypiechart.min.js" %>
     <!-- NiceScroll plugin -->
@@ -1191,7 +1028,7 @@
     <!-- Custom file  -->
     <%= javascript_include_tag "plugins.js" %>
     <!-- Wow.js file -->
-    <%= javascript_include_tag "wow.min.js"></script>
+    <%= javascript_include_tag "wow.min.js" %>
     <script>
         new WOW().init();
     </script>

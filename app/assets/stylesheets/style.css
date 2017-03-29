@@ -34,6 +34,9 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	position: relative;
 }
+.nav-up {
+    top: -65px;
+}
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
@@ -218,8 +221,9 @@ nav {
 nav.shown {top: 0;}
 nav .logo a {
 	padding: 5px 10px;
-	color: #fff;
-	background: #333;
+	font-size: 1.2em;
+	font-weight: bold;
+	background: black;
 	border-radius: 3px;
 	display: inline-block;
 	text-transform: uppercase;
@@ -1547,3 +1551,11 @@ a.selected-item:before, .side-menu a:hover:before {
 }
 
 /* End Media Query */
+
+.black-link {
+	color: #23527c;
+}
+
+.black-link:hover {
+	color: #002038;
+ }

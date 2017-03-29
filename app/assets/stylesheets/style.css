@@ -1560,6 +1560,11 @@ a.selected-item:before, .side-menu a:hover:before {
 	color: #002038;
  }
 
+ .project-image-small {
+	 max-height: 170px;
+	 max-width: 256px;
+ }
+
  .project-image {
 	 max-height: 300px;
 	 max-width: 600px;

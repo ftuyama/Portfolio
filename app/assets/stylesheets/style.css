@@ -1561,8 +1561,8 @@ a.selected-item:before, .side-menu a:hover:before {
  }
 
  .project-image-small {
-	 max-height: 170px;
-	 max-width: 256px;
+	 height: 170px;
+	 width: 256px;
  }
 
  .project-image {

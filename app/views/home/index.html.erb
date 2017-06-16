@@ -123,7 +123,7 @@
                         <span><strong>name: </strong><%= @user.name %></span>
                         <span><strong>E-mail: </strong><%= @user.username %>@gmail.com</span>
                         <span><strong>phone number: </strong>+(31) 98554 5671</span>
-                        <span><strong>website: </strong><a href="https://github.com/<%= @user.github %>">www.github.com/<%= @user.github %></a></span>
+                        <span><strong>website: </strong><a class="blue-link" href="https://github.com/<%= @user.github %>">www.github.com/<%= @user.github %></a></span>
                     </div>
                 </div>
                 <div class="why-me col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
@@ -472,8 +472,9 @@
                 <button class="filter round-corners" data-filter=".other" data-content="OTHER">OTHER</button>
             </div>
             <div id="Container">
+              <% projects_count = @user.projects.count %>
               <% @user.projects.each_with_index do |project, i| %>
-                <%= render :partial => 'project', :locals => { :project => project, :number => (i%6+1) } %>
+                <%= render :partial => 'project', :locals => { :project => project, :number => (i%projects_count+1) } %>
               <% end %>
             </div>
         </div>
@@ -732,8 +733,8 @@
                     <i class="ion-email center"></i>
                     <div class="info-content">
                         <h3>Send a message</h3>
-                        <span><%= @user.username %>@gmail.com</span>
-                        <span>Github: <%= @user.github %></span>
+                        <span><%= link_to "#{@user.username}@gmail.com", "mailto:#{@user.username}@gmail.com" %></span>
+                        <span>Github: <%= link_to @user.github, "https://github.com/#{@user.github}" %></span>
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-12 info">

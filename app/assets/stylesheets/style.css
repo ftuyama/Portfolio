@@ -1147,8 +1147,14 @@ a.selected-item:before, .side-menu a:hover:before {
 .contact .contact-info .info .info-content a {
 	color: #55f;
 }
+.contact .contact-info .info .info-content a:hover {
+	color: #33e;
+}
 .blue-link {
 	color: #55f;
+}
+.blue-link:hover {
+	color: #33e;
 }
 #map {
 	width: 100%;

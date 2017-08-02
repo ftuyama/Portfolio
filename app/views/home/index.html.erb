@@ -102,9 +102,9 @@
                 <!-- Profile Pic -->
                 <div class="my-pic center col-sm-4 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <% if @user.image_url %>
-                      <%= image_tag(@user.image_url, alt: "Profile image") %>
+                      <%= image_tag(@user.image_url, alt: "Profile image", onerror: "this.onerror=null;this.src='assets/me.jpg';") %>
                     <% else %>
-                      <img src="assets/my-face.png" alt="my profile">
+                      <img src="assets/me.jpg" alt="Profile image">
                     <% end %>
                 </div>
                 <div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">

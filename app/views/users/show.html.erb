@@ -6,7 +6,7 @@
 
   <div class="col col-md-2">
     <p>
-      <%= image_tag(@user.image_url, alt: "Profile image", style: "height: 100px") if @user.image_url %>
+      <%= image_tag(@user.image_url, alt: "Profile image", style: "height: 100px", onerror: "this.onerror=null;this.src='/assets/me.jpg';") if @user.image_url %>
     </p>
   </div>
 

@@ -22,7 +22,7 @@
       <% @users.each do |user| %>
         <tr>
           <td><%= user.name %></td>
-          <td><%= image_tag(user.image_url, alt: "Profile image", class: "img-github") if user.image_url %></td>
+          <td><%= image_tag(user.image_url, alt: "Profile image", class: "img-github", onerror: "this.onerror=null;this.src='assets/me.jpg';") if user.image_url %></td>
           <td><%= user.projects.count %></td>
           <td>
             <% if user.github %>

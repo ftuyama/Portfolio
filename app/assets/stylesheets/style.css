@@ -211,7 +211,7 @@ nav {
 	left: 0;
 	width: 100%;
 	padding: 15px 0;
-	background: #fff;
+	background: rgba(100, 100, 100, 0.3);
 	-webkit-box-shadow: 0 0 8px 2px #848484;
 	-moz-box-shadow: 0 0 8px 2px #848484;
 	-ms-box-shadow: 0 0 8px 2px #848484;
@@ -223,7 +223,9 @@ nav .logo a {
 	padding: 5px 10px;
 	font-size: 1.2em;
 	font-weight: bold;
-	background: black;
+	color: #fff;
+	border-style: solid;
+	border-width: 2px;
 	border-radius: 3px;
 	display: inline-block;
 	text-transform: uppercase;

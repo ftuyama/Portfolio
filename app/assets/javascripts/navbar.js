@@ -26,7 +26,7 @@ function hasScrolled() {
     // This is necessary so you never see what is "behind" the navbar.
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
-        $('nav').animate({ top: '-65px' }, 'easeInOutCubic');
+        $('nav').animate({ top: '-69px' }, 'easeInOutCubic');
     } else {
         // Scroll Up
         if(st + $(window).height() < $(document).height()) {

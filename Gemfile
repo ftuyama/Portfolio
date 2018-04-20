@@ -19,7 +19,7 @@ group :production do
   # Rails server
   gem 'puma'
   # Rails PostgreSQL
-  gem 'pg'
+  gem 'pg', '~> 0.15'
   # Solve Heroku issue
   gem 'rails_12factor'
 end

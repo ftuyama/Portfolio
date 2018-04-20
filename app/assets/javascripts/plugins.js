@@ -152,9 +152,7 @@ $(document).ready(function() {
     });
 
     // Start numbers animate at fun-facts section //
-    $.get("https://api.github.com/users/ftuyama", function( data ) {
-        var github = data;
-        console.log(github);
+    $.get("https://api.github.com/users/ftuyama", function( github ) {
         $("#facts").appear(function() {
             $("#number_1").animateNumber({
                 number: 68530

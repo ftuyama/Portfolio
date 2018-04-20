@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(version: 20170329030146) do
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name",        limit: 255
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.string   "description", limit: 255
+    t.string   "description"
     t.string   "github_url"
     t.string   "url"
     t.string   "image"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170329030146) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string   "session_id", limit: 255, null: false
+    t.string   "session_id", null: false
     t.text     "data"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -36,16 +36,16 @@ ActiveRecord::Schema.define(version: 20170329030146) do
   add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",            limit: 255
+    t.string   "name"
     t.datetime "birth"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "formation",       limit: 255
-    t.string   "position",        limit: 255
-    t.string   "username",        limit: 255
-    t.string   "github",          limit: 255
-    t.string   "image_url",       limit: 255
-    t.string   "hashed_password", limit: 255
+    t.string   "formation"
+    t.string   "position"
+    t.string   "username"
+    t.string   "github"
+    t.string   "image_url"
+    t.string   "hashed_password"
   end
 
 end

@@ -152,22 +152,26 @@ $(document).ready(function() {
     });
 
     // Start numbers animate at fun-facts section //
-    $("#facts").appear(function() {
-        $("#number_1").animateNumber({
-            number: 68530
-        }, 2200);
-        $("#number_2").animateNumber({
-            number: 32
-        }, 2200);
-        $("#number_3").animateNumber({
-            number: 315
-        }, 2200);
-        $("#number_4").animateNumber({
-            number: 10000
-        }, 2200);
-    }, {
-        accX: 0,
-        accY: -150
+    $.get("https://api.github.com/users/ftuyama", function( data ) {
+        var github = data;
+        console.log(github);
+        $("#facts").appear(function() {
+            $("#number_1").animateNumber({
+                number: 68530
+            }, 2200);
+            $("#number_2").animateNumber({
+                number: github.public_repos
+            }, 2200);
+            $("#number_3").animateNumber({
+                number: 315
+            }, 2200);
+            $("#number_4").animateNumber({
+                number: 10000
+            }, 2200);
+        }, {
+            accX: 0,
+            accY: -150
+        });
     });
 
     // start easy pie chart plugin when skills section appear //

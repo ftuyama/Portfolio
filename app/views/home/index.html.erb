@@ -106,6 +106,7 @@
                     <% else %>
                       <img src="assets/me.jpg" alt="Profile image">
                     <% end %>
+                    <%= image_tag("https://avatars2.githubusercontent.com/u/11530478?s=460&v=4", alt: "Github image", height: '75px', style: 'margin: -50px 0 0 100px') %>
                 </div>
                 <div class="introduction col-sm-8 col-xs-12 wow fadeInUp" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <h2 class="h2"><%= @user.name %></h2>
@@ -260,23 +261,23 @@
                         <span><span id="chart_num_1">0</span> %</span>
                     </div>
                     <h2>Ruby on Rails</h2>
-                    <h2>Django</h2>
+                    <h2>Phoenix</h2>
                 </div>
                 <!-- main skill No. 2 -->
                 <div class="skill col-md-3 col-sm-6">
                     <div class="chart center" data-percent="63">
                         <span><span id="chart_num_2">0</span> %</span>
                     </div>
-                    <h2>Angular.js</h2>
+                    <h2>Vue.js</h2>
                     <h2>Node.js</h2>
                 </div>
                 <!-- main skill No. 3 -->
                 <div class="skill col-md-3 col-sm-6">
-                    <div class="chart center" data-percent="73">
+                    <div class="chart center" data-percent="72">
                         <span><span id="chart_num_3">0</span> %</span>
                     </div>
-                    <h2>Objective-C</h2>
-                    <h2>Mobile iOS</h2>
+                    <h2>Docker</h2>
+                    <h2>PostgreSQL</h2>
                 </div>
                 <!-- main skill No. 4 -->
                 <div class="skill col-md-3 col-sm-6">
@@ -284,7 +285,7 @@
                         <span><span id="chart_num_4">0</span> %</span>
                     </div>
                     <h2>Deep Learning</h2>
-                    <h2>AI</h2>
+                    <h2>Neural Networks</h2>
                 </div>
             </div>
             <hr>
@@ -354,32 +355,44 @@
                         <h3><a href="http://www.ita.br">ITA</a></h3>
                         <span class="duration">( Jan. 2013 : Dec 2017 )</span>
                         <span class="job-title"> Computer Engineer</span>
-                        <p>After some years of study and dedication, participating and wining awards on national physics olimpiads, I finally started studying at ITA (institute of aeronautical technology).</p>
+                        <p>After some years of study and dedication, participating and wining awards on national physics olimpiads, I finally started studying at ITA (Institute of Aeronautical Technology).</p>
                     </div>
                 </div>
                 <!-- Event No. 2 -->
-                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="1.0s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-briefcase"></i>
                     </div>
                     <div class="content right round-corners">
                         <h3><a href="https://www.guichevirtual.com.br">Guichê Virtual</a></h3>
                         <span class="duration">( Jan. 2016 : Dec. 2016  )</span>
-                        <span class="job-title"> Mobile developer</span>
+                        <span class="job-title"> Intern Mobile developer</span>
                         <p>In the first semester, I joined the mobile team in order to create an ios app from scratch for Guichê Virtual, using xcode framework using objective-c language. </p>
                         <p>Then I decided to join the backend team. I worked with spring framework and groovy language in order to develop new features to the internal site of the company, helping the operational team.</p>
                     </div>
                 </div>
                 <!-- Event No. 3 -->
-                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="0.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
+                <div class="timeline-block clearfix wow fadeInLeft" data-wow-duration="1.5s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
                     <div class="icon">
                         <i class="ion-briefcase"></i>
                     </div>
                     <div class="content left round-corners">
                         <h3><a href="http://quero.education">Quero Bolsa</a></h3>
                         <span class="duration">( Jan. 2017 : Jun. 2017 )</span>
-                        <span class="job-title"> Full-Stack Web Developer</span>
+                        <span class="job-title"> Intern Web Developer</span>
                         <p>Internship as a full-stack web developer using Ruby on Rails framework and agile software development. Joined the content team to improve and completely refactor the team’s section on the site, using technologies such as Sidekiq, Chef recipes and Docker.</p>
+                    </div>
+                </div>
+                <!-- Event No. 3 -->
+                <div class="timeline-block clearfix wow fadeInRight" data-wow-duration="2.0s" data-wow-offset="200" style="animation-duration: 0.5s; animation-name: none;">
+                    <div class="icon">
+                        <i class="ion-briefcase"></i>
+                    </div>
+                    <div class="content right round-corners">
+                        <h3><a href="http://quero.education">Quero Bolsa</a></h3>
+                        <span class="duration">( Jan. 2018 : Now )</span>
+                        <span class="job-title"> Full-Stack Web Developer</span>
+                        <p>Full-stack web developer using Ruby on Rails + Phoenix framework and agile software development. Joined the visits team working on a massive events API built with Elixir, faced many challenges using asynchronous jobs, SQL queries and GTM.</p>
                     </div>
                 </div>
             </div>
@@ -393,8 +406,8 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="qoute-wrapper">
-                <p class="words"><span class="quote-mark open">"</span>Even if you are on the right track, you will get run over if you just set there.<span class="quote-mark end">"</span></p>
-                <p class="author">- Will Rogers -</p>
+                <p class="words"><span class="quote-mark open">"</span>One cannot guess the real difficulties of a problem before having solved it.<span class="quote-mark end">"</span></p>
+                <p class="author">- Carl Siegel -</p>
             </div>
         </div>
     </div>

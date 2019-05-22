@@ -9,6 +9,7 @@ gem 'sass-rails'
 gem 'uglifier'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails'
+gem 'therubyracer'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 # RestClient and JSON parser

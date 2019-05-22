@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   include UsersHelper
   before_action :set_user, only: [:show]
-  before_filter :authenticate
+  before_action :authenticate
 
   # GET /users
   # GET /users.json

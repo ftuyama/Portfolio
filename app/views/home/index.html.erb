@@ -58,7 +58,7 @@
                     <p>Hello, It's me</p>
                     <h1><%= @user.name %></h1>
                     <p><%= @user.formation %> - <%= @user.position %></p>
-                    <%= link_to "Resume .pdf", asset_path("resume.pdf") %>
+                    <%= link_to "Resume .pdf", 'https://github.com/ftuyama/Portfolio/raw/master/public/resume.pdf' %>
                     <a href="#portfolio">my works</a>
                 </div>
                 <!-- End container -->
@@ -71,7 +71,7 @@
 
     <!-- Start Side Menu -->
     <nav id="top-nav">
-        <div class="logo center"><a href="#">Resume</a></div>
+        <div class="logo center"><a href="#">Top</a></div>
         <!-- LOGO -->
         <div class="menu" id="menu">
             <span class="bar b1"></span>
@@ -287,8 +287,8 @@
                     <div class="chart center" data-percent="45">
                         <span><span id="chart_num_4">0</span> %</span>
                     </div>
-                    <h2>Deep Learning</h2>
-                    <h2>Neural Networks</h2>
+                    <h2>Devops Knowledge</h2>
+                    <h2>AWS / Terraform</h2>
                 </div>
             </div>
             <hr>
@@ -962,7 +962,7 @@
     <!-- Including jQuery file -->
     <%= javascript_include_tag "jquery-1.12.1.min.js" %>
     <!-- Including jQuery.appear file -->
-    <%= javascript_include_tag "jquery.appear.js" %>  
+    <%= javascript_include_tag "jquery.appear.js" %>
     <!-- Bootstrap js file -->
     <%= javascript_include_tag "bootstrap.min.js" %>
     <!-- Bootstrap js file -->

@@ -195,5 +195,8 @@ DEPENDENCIES
   tzinfo-data
   uglifier
 
+RUBY VERSION
+   ruby 2.4.9p362
+
 BUNDLED WITH
    2.0.2

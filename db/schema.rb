@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -14,38 +13,37 @@
 ActiveRecord::Schema.define(version: 20170329030146) do
 
   create_table "projects", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.string   "description"
-    t.string   "github_url"
-    t.string   "url"
-    t.string   "image"
-    t.string   "kind"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.string "description"
+    t.string "github_url"
+    t.string "url"
+    t.string "image"
+    t.string "kind"
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string   "session_id", null: false
-    t.text     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "session_id", null: false
+    t.text "data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["session_id"], name: "index_sessions_on_session_id", unique: true
+    t.index ["updated_at"], name: "index_sessions_on_updated_at"
   end
 
-  add_index "sessions", ["session_id"], name: "index_sessions_on_session_id", unique: true
-  add_index "sessions", ["updated_at"], name: "index_sessions_on_updated_at"
-
   create_table "users", force: :cascade do |t|
-    t.string   "name"
+    t.string "name"
     t.datetime "birth"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "formation"
-    t.string   "position"
-    t.string   "username"
-    t.string   "github"
-    t.string   "image_url"
-    t.string   "hashed_password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "formation"
+    t.string "position"
+    t.string "username"
+    t.string "github"
+    t.string "image_url"
+    t.string "hashed_password"
   end
 
 end
